@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "personal-admin-e9f01": {
+      "hosting": {
+        "ingresoEgresoApp": [
+          "personal-admin-e9f01"
+        ]
+      }
+    }
+  }
+}
