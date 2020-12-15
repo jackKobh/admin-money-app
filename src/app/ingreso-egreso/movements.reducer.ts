@@ -1,9 +1,14 @@
 import { createReducer, on } from '@ngrx/store';
+import { AppState } from '../app.reducer';
 import { Movement } from '../models/ingreso-egreso.model';
 import * as movementsActions from './movements.actions';
 
 export interface State {
     items: Movement[];
+}
+
+export interface AppStateWithMovements extends AppState {
+  movements: State
 }
 
 export const initialState: State = {

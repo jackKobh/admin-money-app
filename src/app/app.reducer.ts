@@ -7,7 +7,7 @@ import * as movements from './ingreso-egreso/movements.reducer';
 export interface AppState {
    ui: ui.State,
    auth: auth.State,
-   movements: movements.State
+   //movements: movements.State
 }
 
 
@@ -15,5 +15,5 @@ export interface AppState {
 export const appReducers: ActionReducerMap<AppState> = {
    ui:ui.uiReducer,
    auth: auth.authReducer,
-   movements: movements.movementsReducer
+   //movements: movements.movementsReducer
 }

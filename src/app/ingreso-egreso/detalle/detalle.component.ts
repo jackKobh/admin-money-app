@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
-import { AppState } from 'src/app/app.reducer';
 import { Movement } from 'src/app/models/ingreso-egreso.model';
 import { MovementsService } from 'src/app/services/movements.service';
 import Swal from 'sweetalert2';
+import { AppStateWithMovements } from '../movements.reducer';
 
 @Component({
   selector: 'app-detalle',
@@ -18,7 +18,7 @@ export class DetalleComponent implements OnInit, OnDestroy{
   movementsSubscribe: Subscription;
 
   movements: Movement[] = [];
-  constructor( private store: Store<AppState>,
+  constructor( private store: Store<AppStateWithMovements>,
               private movementsService: MovementsService ) { }
 
   ngOnInit(): void {
