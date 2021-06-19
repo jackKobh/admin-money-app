@@ -20,7 +20,7 @@ import { movementsReducer } from './movements.reducer';
 
 @NgModule({
   declarations: [
-    DashboardComponent,
+
     IngresoEgresoComponent,
     EstadisticaComponent,
     DetalleComponent,

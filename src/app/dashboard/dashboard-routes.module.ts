@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SharedModule } from '../shared/shared.module';
 /* import { AuthGuard } from '../services/auth.guard'; */
 import { DashboardComponent } from './dashboard.component';
 import { dashboardRoutes } from './dashboard.routes';
@@ -15,9 +16,10 @@ const childRoutes: Routes = [
 
 
 @NgModule({
-  declarations: [],
+  declarations: [DashboardComponent],
   imports: [
-    RouterModule.forChild( childRoutes )
+    RouterModule.forChild( childRoutes ),
+    SharedModule
   ],
   exports: [
     RouterModule
