@@ -15,57 +15,57 @@ import { Subscription } from 'rxjs';
 
 
 @Component({
-  selector: 'app-ingreso-egreso',
-  templateUrl: './ingreso-egreso.component.html',
-  styles: [
-  ]
+    selector: 'app-ingreso-egreso',
+    templateUrl: './ingreso-egreso.component.html',
+    styles: [
+    ]
 })
 export class IngresoEgresoComponent implements OnInit, OnDestroy {
-  movementForm: FormGroup;
-  type: ValidMovementType = 'ingreso';
+    movementForm: FormGroup;
+    type: ValidMovementType = 'ingreso';
 
-  //Store values
-  procesando:boolean = false;
+    //Store values
+    procesando: boolean = false;
 
-  //Subscriptions
-  loadingSubs: Subscription;
-  constructor(private fb: FormBuilder,
-              private movementsService: MovementsService,
-              private store: Store<AppState>) {
-    this.movementForm = this.fb.group({
-      descripcion: ['', Validators.required],
-      monto: ['', Validators.required ]
-    })
-  }
+    //Subscriptions
+    loadingSubs: Subscription;
+    constructor(private fb: FormBuilder,
+        private movementsService: MovementsService,
+        private store: Store<AppState>) {
+        this.movementForm = this.fb.group({
+            descripcion: ['', Validators.required],
+            monto: ['', Validators.required]
+        })
+    }
 
-  ngOnInit(): void {
-    this.loadingSubs = this.store.select('ui').subscribe( ( { isLoading }) => {
-      this.procesando = isLoading;
-    })
-  }
+    ngOnInit(): void {
+        this.loadingSubs = this.store.select('ui').subscribe(({ isLoading }) => {
+            this.procesando = isLoading;
+        })
+    }
 
-  ngOnDestroy() {
-    this.loadingSubs.unsubscribe();
-  }
+    ngOnDestroy() {
+        this.loadingSubs.unsubscribe();
+    }
 
-  guardar() {
-    if( this.movementForm.invalid) return;
-    console.log( this.movementForm.value );
+    guardar() {
+        if (this.movementForm.invalid) return;
+        console.log(this.movementForm.value);
 
-    const { descripcion, monto } = this.movementForm.value;
+        const { descripcion, monto } = this.movementForm.value;
 
-    const movement:Movement = new Movement( descripcion, monto, this.type );
-    this.movementsService.createMovement( movement )
-    .then( (ref) => {
-      Swal.fire('Registro creado', descripcion, 'success');
-      this.movementForm.reset();
-      this.store.dispatch( uiActions.stopLoading() );
-    })
-    .catch( err => {
-      Swal.fire('Ho rayos', err.message, 'error');
-      this.store.dispatch( uiActions.stopLoading() );
-    });
-  }
+        const movement: Movement = new Movement(descripcion, monto, this.type);
+        this.movementsService.createMovement(movement)
+            .then((ref) => {
+                Swal.fire('Registro creado', descripcion, 'success');
+                this.movementForm.reset();
+                this.store.dispatch(uiActions.stopLoading());
+            })
+            .catch(err => {
+                Swal.fire('Ho rayos', err.message, 'error');
+                this.store.dispatch(uiActions.stopLoading());
+            });
+    }
 
 
 

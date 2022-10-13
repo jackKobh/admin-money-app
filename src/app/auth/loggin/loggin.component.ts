@@ -9,64 +9,64 @@ import * as uiActions from 'src/app/shared/ui.actions';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-loggin',
-  templateUrl: './loggin.component.html',
-  styles: [
-  ]
+    selector: 'app-loggin',
+    templateUrl: './loggin.component.html',
+    styles: [
+    ]
 })
 export class LogginComponent implements OnInit, OnDestroy {
-  loginForm: FormGroup;
-  cargando:boolean = false;
-  uiSubscription: Subscription;
-  constructor(private formBuilder: FormBuilder,
-              private authService: AuthService,
-              private router: Router,
-              private store: Store<AppState>) {
-    this.loginForm = this.formBuilder.group({
-      correo: ['', [Validators.required, Validators.email] ],
-      password: ['', Validators.required ]
-    })
-   }
+    loginForm: FormGroup;
+    cargando: boolean = false;
+    uiSubscription: Subscription;
+    constructor(private formBuilder: FormBuilder,
+        private authService: AuthService,
+        private router: Router,
+        private store: Store<AppState>) {
+        this.loginForm = this.formBuilder.group({
+            correo: ['', [Validators.required, Validators.email]],
+            password: ['', Validators.required]
+        })
+    }
 
-  ngOnInit(): void {
-    this.uiSubscription = this.store.select('ui').subscribe(ui => {
-      this.cargando = ui.isLoading;
-    });
-  }
+    ngOnInit(): void {
+        this.uiSubscription = this.store.select('ui').subscribe(ui => {
+            this.cargando = ui.isLoading;
+        });
+    }
 
-  ngOnDestroy() {
-    this.uiSubscription.unsubscribe();
-  }
+    ngOnDestroy() {
+        this.uiSubscription.unsubscribe();
+    }
 
-  login() {
+    login() {
 
-    if ( this.loginForm.invalid ) return;
-    this.store.dispatch( uiActions.isLoading() );
-
-
-    /* Swal.fire({
-      title: 'Espere por favor!',
-
-      didOpen: () => {
-        Swal.showLoading()
-      }
-    });
- */
+        if (this.loginForm.invalid) return;
+        this.store.dispatch(uiActions.isLoading());
 
 
-    const { correo, password } = this.loginForm.value;
-    this.authService.login( correo, password)
-    .then( credenciales => {
-      console.log(credenciales);
-      /* Swal.close(); */
-      this.store.dispatch( uiActions.stopLoading() );
-      this.router.navigate(['/']);
-    } )
-    .catch(err => Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: err.message
-    }))
-  }
+        /* Swal.fire({
+          title: 'Espere por favor!',
+    
+          didOpen: () => {
+            Swal.showLoading()
+          }
+        });
+     */
+
+
+        const { correo, password } = this.loginForm.value;
+        this.authService.login(correo, password)
+            .then(credenciales => {
+                console.log(credenciales);
+                /* Swal.close(); */
+                this.store.dispatch(uiActions.stopLoading());
+                this.router.navigate(['/']);
+            })
+            .catch(err => Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: err.message
+            }))
+    }
 
 }

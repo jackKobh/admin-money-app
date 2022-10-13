@@ -1,0 +1,323 @@
+
+/*  padding  */
+
+%p-2 {
+    padding: 2px !important;
+}
+
+.p-2 {
+    @extend %p-2;
+}
+
+
+
+.p-3 {
+    padding: 3px !important;
+}
+
+%p-5 {
+    padding: 5px !important;
+}
+
+.p-5 {
+    @extend %p-5;
+}
+
+.p-8 {
+    padding: 8px !important;
+}
+
+%p-10 {
+    padding: 10px !important;
+}
+
+.p-10 {
+    @extend %p-10;
+}
+
+%p-15 {
+    padding: 15px !important;
+}
+
+.p-15 {
+    @extend %p-15;
+}
+
+%p-20 {
+    padding: 20px !important;
+}
+
+.p-20 {
+    @extend %p-20;
+}
+
+%p-30 {
+    padding: 30px !important;
+}
+
+.p-30 {
+    @extend %p-30;
+}
+
+%p-35 {
+    padding: 35px !important;
+}
+
+.p-35 {
+    @extend %p-35;
+}
+
+%p-40 {
+    padding: 40px !important;
+}
+
+.p-40 {
+    @extend %p-40;
+}
+
+%p-50 {
+    padding: 50px !important;
+}
+
+.p-50 {
+    @extend %p-50;
+}
+
+%p-60 {
+    padding: 60px !important;
+}
+
+.p-60 {
+    @extend %p-60;
+}
+
+%p-100 {
+    padding: 100px !important;
+}
+
+.p-100 {
+    @extend %p-100;
+}
+
+/* PADDINGS DUO */
+%p-10-0 {
+    padding: 10px 0 !important;
+}
+
+.p-10-0 {
+    @extend %p-10-0;
+}
+
+%p-0-10 {
+    padding: 0 10px !important;
+}
+
+.p-0-10 {
+    @extend %p-0-10;
+}
+
+
+%p-0-30 {
+    padding: 0 30px;
+}
+.p-0-30 {
+    @extend %p-0-30;
+}
+
+%p-30-60 {
+    padding: 30px 60px;
+}
+
+.p-30-60 {
+    @extend %p-30-60;
+}
+
+%p-35-75 {
+    padding: 35px 75px;
+}
+
+.p-35-75 {
+    @extend %p-35-75;
+}
+
+%p-40-30 {
+    padding: 40px 30px;
+}
+
+.p-40-30 {
+    @extend %p-40-30;
+}
+
+
+.p-60-50 {
+    padding: 60px 50px;
+}
+.p-15-5-15-5 {
+    padding: 15px 5px 15px 5px;
+}
+
+.p-5-15-5-15 {
+    padding: 5px 15px 5px 15px;
+}
+
+.p-50-30-20-30 {
+    padding: 50px 30px 20px 30px !important;
+}
+
+
+
+
+
+/*  padding left  */
+
+%pl-5 {
+    padding-left: 5px !important;
+}
+
+.pl-5 {
+    @extend %pl-5;
+}
+
+%pl-10 {
+    padding-left: 10px !important;
+}
+
+.pl-10 {
+    @extend %pl-10;
+}
+
+%pl-15 {
+    padding-left: 15px !important;
+}
+
+.pl-15 {
+    @extend %pl-15;
+}
+
+%pl-20 {
+    padding-left: 20px !important;
+}
+
+.pl-20 {
+    @extend %pl-20;
+}
+
+%pl-40 {
+    padding-left: 40px !important;
+}
+
+.pl-40 {
+    @extend %pl-40;
+}
+
+/*  padding rogth  */
+
+%pr-5 {
+    padding-right: 5px !important;
+}
+
+.pr-5 {
+    @extend %pr-5;
+}
+
+%pr-10 {
+    padding-right: 10px !important;
+}
+
+.pr-10 {
+    @extend %pr-10;
+}
+
+%pr-15 {
+    padding-right: 15px !important;
+}
+
+.pr-15 {
+    @extend %pr-15;
+}
+
+%pr-40 {
+    padding-right: 40px !important;
+}
+
+.pr-40 {
+    @extend %pr-40;
+}
+
+/*  padding top  */
+
+%pt-10 {
+    padding-top: 10px !important;
+}
+
+.pt-10 {
+    @extend %pt-10;
+}
+
+%pt-15 {
+    padding-top: 15px !important;
+}
+
+.pt-15 {
+    @extend %pt-15;
+}
+
+%pt-20 {
+    padding-top: 20px !important;
+}
+
+.pt-20 {
+    @extend %pt-20;
+}
+
+%pt-25 {
+    padding-top: 25px !important;
+}
+
+.pt-25 {
+    @extend %pt-25;
+}
+
+/*  padding bottom  */
+
+%pb-10 {
+    padding-bottom: 10px !important;
+}
+
+.pb-10 {
+    @extend %pb-10;
+}
+
+%pb-15 {
+    padding-bottom: 15px !important;
+}
+
+.pb-15 {
+    @extend %pb-15;
+}
+
+%pb-20 {
+    padding-bottom: 20px !important;
+}
+
+.pb-20 {
+    @extend %pb-20;
+}
+
+%pb-25 {
+    padding-bottom: 25px !important;
+}
+
+.pb-25 {
+    @extend %pb-25;
+}
+
+/*  horizontal padding  */
+%ph-15 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.ph-15 {
+    @extend %ph-15;
+}

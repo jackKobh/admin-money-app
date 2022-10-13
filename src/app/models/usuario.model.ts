@@ -1,16 +1,15 @@
 import { uiReducer } from "../shared/ui.reducer";
+import { PeriodicidadModel } from "./periodicidad.model";
 
-export class Usuario {
+export interface Usuario {
 
-  static fromFirebase({email, uid, nombre} ) {
-    return new Usuario(uid, nombre, email);
-  }
 
-  constructor(
-    public uid: string | undefined,
-    public nombre: string,
-    public email: string | null | undefined
-  ) {
+    uid: string | undefined;
+    nombre: string;
+    email: string | null | undefined;
 
-  }
+    avatar?: string;
+
+    periodicidad: PeriodicidadModel
+
 }

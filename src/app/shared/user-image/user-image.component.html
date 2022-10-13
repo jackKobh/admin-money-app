@@ -1,0 +1,30 @@
+<div class="pos-r img-container">
+    <ng-container *ngIf="!control">
+        <ng-container *ngIf="url">
+            <img src="url" class="rounded-circle wp-100 hp-100" alt="Avatar" />
+        </ng-container>
+        
+        <ng-container *ngIf="!url">
+            <div class="wp-100 hp-100 br-circle h-border">
+                <img src="../../../assets/images/general/user.svg" class="rounded-circle wp-100 hp-100"  alt="Avatar" />
+            </div>
+        </ng-container>
+    </ng-container>
+    
+    
+    <ng-container *ngIf="control">
+        <ng-container *ngIf="control?.value">
+            <img src="control?.value" class="rounded-circle wp-100 hp-100" alt="Avatar" />
+        </ng-container>
+        
+        <ng-container *ngIf="!control?.value">
+            <div class="wp-100 hp-100 br-circle h-border">
+                <img src="../../../assets/images/general/user.svg" class="rounded-circle wp-100 hp-100"  alt="Avatar" />
+            </div>
+        </ng-container>
+    
+        <div class="pos-a upload-control f-center wp-100 hp-100 br-circle clickeable">
+            <span><i class="fa fa-upload"></i></span>
+        </div>
+    </ng-container>
+</div>

@@ -5,11 +5,11 @@
 
         <div class="user-wrapper">
           <div class="profile-image">
-            <img src="assets/images/faces/face1.jpg" alt="profile image">
+            <app-user-image [url]="user?.avatar"></app-user-image>
           </div>
 
-          <div class="text-wrapper">
-            <p class="profile-name">{{ userName }}</p>
+          <div class="text-wrapper f-center">
+            <p class="profile-name">{{ user?.nombre }}</p>
             <div>
               <small class="designation text-muted"></small>
             </div>
@@ -46,6 +46,15 @@
         <span class="menu-title">Detalle</span>
       </a>
     </li>
+
+    <li class="nav-item">
+        <a
+        class="nav-link"
+        routerLink="/configuraciones">
+          <i class="menu-icon fa fa-cogs"></i>
+          <span class="menu-title">Configuraciones</span>
+        </a>
+      </li>
 
     <li class="nav-item">
       <a

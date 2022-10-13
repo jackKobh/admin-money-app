@@ -1,0 +1,26 @@
+export const EnErrors = {
+    E00000000: 'Service conection error',
+    E00000001: 'The user has been completed the rewards process',
+    E00000002: 'The user has been deactivated',
+    E00000003: 'The user is not active yet',
+    E00000004: 'Incorrect email address or password',
+    E00000005: 'User not found in the system',
+    E00000006: 'This user not register in this company',
+    E00000007: 'not_value_company_consolidation',
+    E00000008: '',
+    E00000009: 'This user has not been assigned to a company',
+    E00000010: 'User deactivated',
+    E00000011: 'The version of your device id is not the most recent',
+    E00000012: '',
+    E00000013: '',
+    E00000014: '',
+    E00000015: '',
+    E00000016: '',
+    E00000017: '',
+    E00000018: '',
+    E00000019: 'Bad token!',
+    E00000020: '',
+
+    E00000021: 'Bad code',
+    E00000105: 'Service not available'
+}

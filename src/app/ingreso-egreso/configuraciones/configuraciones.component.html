@@ -1,0 +1,66 @@
+<div class="jumbotron">
+    <h1 class="display-5">Información general</h1>
+
+    <hr class="my-4">
+    <form [formGroup]="configUserForm" (ngSubmit)="guardar()">
+
+        
+        <div class="w-150 h-150">
+            <app-user-image [control]="configUserForm.get('avatar')"></app-user-image>
+        </div>
+   
+  
+       <div class="mt-20">
+        Id de usuario: 
+        <button type="button" class="btn btn-primary" (click)="copyId()">
+            {{ usuario?.uid }} <span class="badge badge-light"><i class="menu-icon fa fa-copy"></i></span>
+          </button>
+       </div>
+       
+        <div class="form-group">
+            <label for="emailUser">Correo electronico</label>
+            <input type="email" class="form-control" id="emailUser" aria-describedby="emailHelp"
+                placeholder="Enter email" formControlName="email">
+            <small id="emailHelp" class="form-text text-muted">example@example.net</small>
+        </div>
+        <div class="form-group">
+            <label for="nameUser">Nombre de usuario</label>
+            <input type="text" class="form-control" id="nameUser" placeholder="Nombre de usuario"
+                formControlName="nombre">
+        </div>
+        <!-- <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> -->
+        <ng-container *ngIf="configUserForm.valid">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </ng-container>
+        
+    </form>
+</div>
+
+<div class="jumbotron">
+    <h1 class="display-5">Periodicidad</h1>
+
+    <hr class="my-4">
+    <form [formGroup]="periodicityForm" (ngSubmit)="guardar()">
+   
+  
+      
+       
+        <div class="form-group">
+            <label class="mr-sm-2" for="inlineFormCustomSelect">Periodicidad</label>
+            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" formControlName="tipo">
+                <option selected>Selecciona un tipo de periodicidad</option>
+                <option value="30">Mensual</option>
+                <option value="7">Semanal</option>
+                <option value="15">Quincenal</option>
+            </select>
+        </div>
+       
+        <ng-container *ngIf="configUserForm.valid">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </ng-container>
+        
+    </form>
+</div>

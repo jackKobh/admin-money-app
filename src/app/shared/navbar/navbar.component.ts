@@ -3,6 +3,7 @@ import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { AppState } from 'src/app/app.reducer';
+import { Usuario } from 'src/app/models/usuario.model';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +13,7 @@ import { AppState } from 'src/app/app.reducer';
 })
 export class NavbarComponent implements OnInit {
 
-  userName: string = '';
+  user: Usuario;
   //subscribes
   userSubscribe: Subscription;
 
@@ -23,7 +24,7 @@ export class NavbarComponent implements OnInit {
     .pipe(
       filter(({ user }) => user != null)
     )
-    .subscribe( ({ user }) => this.userName = user.nombre );
+    .subscribe( ({ user }) => this.user = user );
   }
 
 }

@@ -1,0 +1,15 @@
+.upload-control {
+    top: 0;
+    left: 0;
+    background-color: var(--color-highlighted);
+    display: none;
+    
+}
+
+.upload-control > span {
+    color: white;
+}
+
+.img-container:hover > .upload-control {
+    display: flex;
+}

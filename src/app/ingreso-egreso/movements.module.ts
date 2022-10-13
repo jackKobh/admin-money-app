@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { DashboardComponent } from '../dashboard/dashboard.component';
@@ -15,6 +15,7 @@ import { RouterModule } from '@angular/router';
 import { DashboardRoutesModule } from '../dashboard/dashboard-routes.module';
 import { StoreModule } from '@ngrx/store';
 import { movementsReducer } from './movements.reducer';
+import { ConfiguracionesComponent } from './configuraciones/configuraciones.component';
 
 
 
@@ -27,11 +28,16 @@ import { movementsReducer } from './movements.reducer';
 
 
 
-    MovementsOrderPipe
+    MovementsOrderPipe,
+
+
+
+    ConfiguracionesComponent
   ],
   imports: [
     CommonModule,
     StoreModule.forFeature('movements', movementsReducer ),
+    FormsModule,
     ReactiveFormsModule,
     ChartsModule,
     SharedModule,

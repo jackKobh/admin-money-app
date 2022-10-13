@@ -19,6 +19,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 //Modulos
 import { AuthModule } from './auth/auth.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { AuthModule } from './auth/auth.module';
   ],
   imports: [
     BrowserModule,
-
+    FormsModule,
     AuthModule,
 
 

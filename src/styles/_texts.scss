@@ -1,0 +1,265 @@
+.normal-text {
+    color: var(--color-text);
+}
+
+%overflow-text {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.overflow-text {
+    @extend %overflow-text;
+}
+
+/*  Align text  */
+
+%ta-center {
+    text-align: center;
+}
+
+.ta-center {
+    @extend %ta-center;
+}
+
+%ta-left {
+    text-align: left;
+}
+
+.ta-left {
+    @extend %ta-left;
+}
+
+%ta-right {
+    text-align: right;
+}
+
+.ta-right {
+    @extend %ta-right;
+}
+
+/*  FONT WEIGHT  */
+
+%fw-normal {
+    font-weight: normal;
+}
+
+.fw-normal {
+    @extend %fw-normal;
+}
+
+%fw-bold {
+    font-weight: bold;
+}
+
+.fw-bold {
+    @extend %fw-bold;
+}
+
+%fw-semibold {
+    font-weight: bolder;
+}
+
+.fw-semibold {
+    @extend %fw-semibold;
+}
+
+%fw-lighter {
+    font-weight: lighter;
+}
+
+.fw-lighter {
+    @extend %fw-lighter;
+}
+
+%fw-400 {
+    font-weight: 400;
+}
+
+.fw-400 {
+    @extend %fw-400;
+}
+
+%fw-500 {
+    font-weight: 500;
+}
+
+.fw-500 {
+    @extend %fw-500;
+}
+
+%fw-600 {
+    font-weight: 600;
+}
+
+.fw-600 {
+    @extend %fw-600;
+}
+
+/*  FONT SIZE  */
+
+%fs-7 {
+    font-size: 7px !important;
+}
+
+.fs-7 {
+    @extend %fs-7;
+}
+
+%fs-8 {
+    font-size: 8px !important;
+}
+
+.fs-8 {
+    @extend %fs-8;
+}
+
+%fs-9 {
+    font-size: 9px !important;
+}
+
+.fs-9 {
+    @extend %fs-9;
+}
+
+%fs-10 {
+    font-size: 10px !important;
+}
+
+.fs-10 {
+    @extend %fs-10;
+}
+
+%fs-11 {
+    font-size: 11px !important;
+}
+
+.fs-11 {
+    @extend %fs-11;
+}
+
+%fs-12 {
+    font-size: 12px !important;
+}
+
+.fs-12 {
+    @extend %fs-12;
+}
+
+%fs-13 {
+    font-size: 13px !important;
+}
+
+.fs-13 {
+    @extend %fs-13;
+}
+
+%fs-14 {
+    font-size: 14px !important;
+}
+
+.fs-14 {
+    @extend %fs-14;
+}
+
+%fs-15 {
+    font-size: 15px !important;
+}
+
+.fs-15 {
+    @extend %fs-15;
+}
+
+%fs-16 {
+    font-size: 16px !important;
+}
+
+.fs-16 {
+    @extend %fs-16;
+}
+
+%fs-17 {
+    font-size: 17px !important;
+}
+
+.fs-17 {
+    @extend %fs-17;
+}
+
+%fs-18 {
+    font-size: 18px !important;
+}
+
+.fs-18 {
+    @extend %fs-18;
+}
+
+%fs-19 {
+    font-size: 19px !important;
+}
+
+.fs-19 {
+    @extend %fs-19;
+}
+
+%fs-20 {
+    font-size: 20px !important;
+}
+
+.fs-20 {
+    @extend %fs-20;
+}
+
+%fs-21 {
+    font-size: 21px !important;
+}
+
+.fs-21 {
+    @extend %fs-21;
+}
+
+%fs-22 {
+    font-size: 22px !important;
+}
+
+.fs-22 {
+    @extend %fs-22;
+}
+
+%fs-23 {
+    font-size: 23px !important;
+}
+
+.fs-23 {
+    @extend %fs-23;
+}
+
+%fs-24 {
+    font-size: 24px !important;
+}
+
+.fs-24 {
+    @extend %fs-24;
+}
+
+.fs-25 {
+    font-size: 25px !important;
+}
+
+.fs-26 {
+    font-size: 26px !important;
+}
+
+%fs-32 {
+    font-size: 32px !important;
+}
+.fs-32 {
+    @extend %fs-32;
+}
+
+%fs-35 {
+    font-size: 35px !important;
+}
+.fs-35 {
+    @extend %fs-35;
+}
