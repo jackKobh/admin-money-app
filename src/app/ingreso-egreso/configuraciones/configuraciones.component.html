@@ -6,7 +6,7 @@
 
         
         <div class="w-150 h-150">
-            <app-user-image [control]="configUserForm.get('avatar')"></app-user-image>
+            <app-user-image [control]="configUserForm.get('avatar')" (updateEvent)="updateImage($event)"></app-user-image>
         </div>
    
   

@@ -6,6 +6,11 @@
     
 }
 
+.upload-percent {
+    top: 0;
+    left: 0;
+    background-color: var(--color-highlighted);    
+}
 .upload-control > span {
     color: white;
 }
@@ -13,3 +18,21 @@
 .img-container:hover > .upload-control {
     display: flex;
 }
+
+.img-container {
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: blue;
+    /* commented for demo
+    float: left;
+    margin-left: 125px;
+    margin-top: 20px;
+    */
+    
+    /*for demo*/
+    display:inline-block;
+    vertical-align:middle;
+  }
+  .img-container img{
+    width:100%;
+  }
