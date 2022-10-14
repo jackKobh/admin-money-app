@@ -51,15 +51,19 @@ export class ConfiguracionesComponent implements OnInit, OnDestroy {
     }
 
     guardar() {
+        // console.log('save')
         const { email, nombre, avatar } = this.configUserForm.value;
         const { tipo } = this.periodicityForm.value;
+
+        // console.log('save f1 ', email, nombre, avatar)
+        // console.log('save f2 ', tipo)
 
         this.store.dispatch(isLoading());
 
 
         this.autService.updateUser({
             nombre,
-            email,
+            email: this.usuario.email,
             uid: this.usuario.uid,
             avatar,
             periodicidad: {
@@ -76,10 +80,12 @@ export class ConfiguracionesComponent implements OnInit, OnDestroy {
 
     loadForm() {
         this.configUserForm = this.fb.group({
-            email: [this.usuario?.periodicidad?.tipo, Validators.required],
+            email: [this.usuario?.email, Validators.required],
             nombre: [this.usuario?.nombre, Validators.required],
             avatar: [this.usuario?.avatar]
-        })
+        });
+
+        this.configUserForm.get('email').disable();
     }
 
     loadFormPeriodicity() {
